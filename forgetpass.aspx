@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="forgetpass.aspx.cs" Inherits="forgetpass" %>
 
 <!DOCTYPE html>
 
 <html>
 <head>
-<title>Innovative Login Form Flat Responsive Widget Template :: w3layouts</title>
+<title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Innovative Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -32,8 +32,8 @@
 <body>
 	<!-- main -->
 	<div class="main">
-		<h1>Logga in </h1>
-        <h5>Ange dina inloggningsuppgifter.</h5> 
+		<h1>Glömt ditt lösenord! </h1>
+        <h5>Ange din epost-adress.</h5> 
 		<div class="main-info">
 			<div class="sap_tabs">
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
@@ -45,18 +45,18 @@
 					<div class="resp-tabs-container">
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 							<div class="agileits-login">
-								<form  action="#" method="post">
-									<input  type="text" class="email" name="Email" placeholder="Email" required="" id="txbUser" />
-									<input  type="password" class="password" name="Password" placeholder="Password" required="" id="txbPass" />
+								<form  action="#" runat="server" method="post">
+									<asp:Textbox ID="txbforget" runat="server"  type="text" class="email" name="Email" placeholder="Enter your Email" required=""></asp:Textbox>
 									<div class="wthree-text"> 
 										<ul> 
 											<li>
 												<label class="anim">
-													<input type="checkbox" class="checkbox">
-													<span> Remember me ?</span> 
+													
+													<span> Ange dittanvändarnamn eller den e-postadress som du använde när du registrerade dig. Vi skickar ett e-postmeddelande med ditt användarnamn och en länk där du kan återställa ditt lösenord.</span> 
 												</label> 
 											</li>
-											<li> <a href="#">Forgot password?</a> </li>
+											
+                                            
                                             
 										</ul>
                                         
@@ -64,10 +64,15 @@
 									</div>  
 									<div class="w3ls-submit">
 										<div class="submit-text">
-											<input type="submit" value="LOGIN" id="btnLogin"> 
-                                            
-										</div>	
+											<asp:Button ID="btnForget" type="submit" runat="server" Text="Återställ"  />
+                                     
+                                       
+                                        	       
+                                             
+										</div>
+                                        
 									</div>
+                                    
                                     	
 								</form>
 							</div> 
@@ -86,7 +91,7 @@
 		</div>
 		<!-- copyright -->
 		<div class="copyright">
-			<p> © 2016 Innovative Login Form . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+			<p> © 2016 Innovative Login Form . All rights reserved | Design by ?</p>>
 		</div>
 		<!-- //copyright -->
 	</div>	
