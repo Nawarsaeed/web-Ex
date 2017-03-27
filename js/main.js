@@ -2,6 +2,7 @@ jQuery(document).ready(function($){
 	var formModal = $('.cd-user-modal'),
 		formLogin = formModal.find('#cd-login'),
 		formSignup = formModal.find('#cd-signup'),
+        formSignout = formModal.find('#cd-signout'),
 		formForgotPassword = formModal.find('#cd-reset-password'),
 		formModalTab = $('.cd-switcher'),
 		tabLogin = formModalTab.children('li').eq(0).children('a'),
@@ -19,6 +20,8 @@ jQuery(document).ready(function($){
 	mainNav.on('click', '.cd-signup', signup_selected);
 	//open login-form form
 	mainNav.on('click', '.cd-signin', login_selected);
+
+	mainNav.on('click', '.cd-signout', login_selected);
 
 	//close modal
 	formModal.on('click', function(event){

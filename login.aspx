@@ -52,7 +52,7 @@
 										<ul> 
 											<li>
 												<label class="anim">
-													<input type="checkbox" class="checkbox">
+													<input type="checkbox" class="checkbox" id="ccbReme" runat="server" Check="false"/>
 													<span> fortsätt att vara inloggad</span> 
 												</label> 
 											</li>
@@ -65,19 +65,22 @@
 									</div>  
 									<div class="w3ls-submit">
 										<div class="submit-text">
-											<asp:Button ID="btnLogin" type="submit" runat="server" Text="Logga in"  />
-                                     
+											<asp:Button ID="btnLogin" type="submit" runat="server" Text="Logga in" onclick="btnLogin_Click" />
+
                                         <ul>
                                             <li>
                                                     <a href="regist.aspx" style="float:right; color:aqua;">Skapa ett konto!</a>
-                                                </li>
+                                            </li>
                                         </ul>
                                         	       
                                              
 										</div>
                                         
 									</div>
-                                    
+                                   <div class="message">
+                                     <asp:Label ID="lblError" runat="server" />
+                                     <asp:Label ID="lblWork" runat="server" />
+                                   </div>
                                     	
 								</form>
 							</div> 
@@ -96,7 +99,7 @@
 		</div>
 		<!-- copyright -->
 		<div class="copyright">
-			<p> © 2016 Innovative Login Form . All rights reserved | Design by ?</p>>
+			<p> © 2016 Innovative Login Form . All rights reserved | Design by ?</p>
 		</div>
 		<!-- //copyright -->
 	</div>	

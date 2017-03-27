@@ -51,25 +51,20 @@
 										<ul> 
 											<li>
 												<label class="anim">
-													
-													<span> Ange dittanvändarnamn eller den e-postadress som du använde när du registrerade dig. Vi skickar ett e-postmeddelande med ditt användarnamn och en länk där du kan återställa ditt lösenord.</span> 
+													<a id="Undertext" runat="server"> Ange dittanvändarnamn eller den e-postadress som du använde när du registrerade dig. Vi skickar ett e-postmeddelande med ditt användarnamn och en länk där du kan återställa ditt lösenord.</a> 
 												</label> 
 											</li>
-											
-                                            
-                                            
 										</ul>
                                         
 										<div class="clear"> </div>
 									</div>  
 									<div class="w3ls-submit">
 										<div class="submit-text">
-											<asp:Button ID="btnForget" type="submit" runat="server" Text="Återställ"  />
-                                     
-                                       
-                                        	       
-                                             
+											<asp:Button ID="btnForget" type="submit" runat="server" Text="Återställ" onclick="btnForget_Click" />
 										</div>
+                                        <div class="message">
+                                            <asp:Label ID="lblError" runat="server" />
+                                        </div>
                                         
 									</div>
                                     

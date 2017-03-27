@@ -21,8 +21,10 @@
 		<nav class="main-nav">
 			<ul>
 				<!-- inser more links here -->
-				<li><a class="cd-signin" href="login.aspx">Logga in</a></li>
-				<li><a class="cd-signup" href="regist.aspx">Registrera</a></li>
+                <li><a class="cd-name" id="OurUser" visible="false" runat="server"></a></li>
+				<li><a class="cd-signin" id="signin" href="login.aspx" runat="server" visible="false">Logga in</a></li>
+				<li><a class="cd-signup" id="signup" href="regist.aspx" runat="server" visible="false">Registrera</a></li>
+
 			</ul>
 		</nav>
 	</header>

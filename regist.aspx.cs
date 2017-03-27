@@ -11,4 +11,35 @@ public partial class hdv : System.Web.UI.Page
     {
 
     }
+
+    protected void btnRigs_Click(object sender, EventArgs e)
+    {
+        DataAccess access = new DataAccess();
+
+
+        string u = txbUsername.Text;
+        string em = txbEmail.Text;
+        string p = txbPassword.Text;
+
+        string sqlCmd;
+        //Samla indata
+
+
+        sqlCmd = "INSERT INTO TBL_USER2 VALUES ('" + u + "', '" + p + "', '" + em + "')";
+
+        //Skicka med sql-satsen och en err-label
+        //Kontrollera att kunden är registrerat genom att
+        //ladda om sidan och kolla DroppDownList
+
+        access.SetData(sqlCmd, lblError);
+
+        txbUsername.Text = "";
+        txbEmail.Text = "";
+        txbPassword.Text = "";
+
+        if (lblError.Text == "")
+        {
+            Response.Redirect("login.aspx");
+        }
+    }
 }
