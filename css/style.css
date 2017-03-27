@@ -179,6 +179,7 @@ input.checkbox:checked:after {
     left: -34px;
 	cursor:pointer;
 }
+
 .agileits-login input[type="submit"] {
     font-size: 1em;
     color: #fff;
