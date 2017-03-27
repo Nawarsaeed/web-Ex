@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="forgetpass.aspx.cs" Inherits="forgetpass" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="forgetpass.aspx.cs" Inherits="forgetpass" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
 
-<html>
-<head>
 <title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -28,8 +28,7 @@
 		});
 	   </script>
 <!-- //js -->
-</head>
-<body>
+
 	<!-- main -->
 	<div class="main">
 		<h1>Glömt ditt lösenord! </h1>
@@ -91,6 +90,6 @@
 		<!-- //copyright -->
 	</div>	
 	<!-- //main --> 
-</body>
-</html>
+
+</asp:Content>
 

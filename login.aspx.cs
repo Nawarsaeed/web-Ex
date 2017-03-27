@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Default2 : System.Web.UI.Page
+public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,7 +34,7 @@ public partial class Default2 : System.Web.UI.Page
 
 
         //Bygg sql-satsen, SELECT för kund
-        string SqlCmd = "SELECT * FROM TBL_USER2 WHERE EMAIL= '" + t + "' ;";
+        string SqlCmd = "SELECT * FROM TBL_USER WHERE USER_EMAIL= '" + t + "' ;";
 
         //Skicka med sql-satsen, vilken greadView ska utdata vissas i och en err-label
         access.ReadData(SqlCmd, lblError, pw, out Username, out Right);
@@ -71,9 +71,9 @@ public partial class Default2 : System.Web.UI.Page
             lblWork.Text = "Ditt mail eller lösenord är fel";
         }
     }
+       
 
 
-
-
+    
 
 }

@@ -25,13 +25,14 @@ public partial class hdv : System.Web.UI.Page
         //Samla indata
 
 
-        sqlCmd = "INSERT INTO TBL_USER2 VALUES ('" + u + "', '" + p + "', '" + em + "')";
+        //sämsta sätt
+            sqlCmd = "INSERT INTO TBL_USER (USER_NAME, USER_PASSWORD, USER_EMAIL) VALUES ('" + u + "', '" + p + "', '" + em + "')";
+            access.SetData(sqlCmd, lblError);
+
 
         //Skicka med sql-satsen och en err-label
         //Kontrollera att kunden är registrerat genom att
         //ladda om sidan och kolla DroppDownList
-
-        access.SetData(sqlCmd, lblError);
 
         txbUsername.Text = "";
         txbEmail.Text = "";

@@ -23,7 +23,7 @@ public partial class forgetpass : System.Web.UI.Page
   
 
         //Bygg sql-satsen
-        string SqlCmd = "SELECT * FROM TBL_USER2 WHERE EMAIL= '" + mail + "' ;";
+        string SqlCmd = "SELECT * FROM TBL_USER WHERE EMAIL= '" + mail + "' ;";
 
         //Skicka med sql-satsen
         access.ReadMail(SqlCmd, lblError, mail, out havemail);
