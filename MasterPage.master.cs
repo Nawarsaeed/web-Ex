@@ -8,7 +8,24 @@ using System.Web.UI.WebControls;
 public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
-    {
+    { 
+     if (!IsPostBack)
+        {
+            HttpCookie Usercookies = Request.Cookies["User"];
+            if (Usercookies != null)
+            {
+                OurUser.Visible = true;
+                OurUser.InnerText = Usercookies["Name"];
+                signin.Visible = true;
+                signin.InnerText = "logga ut";
+                signup.Visible = false;
+            }
+            else
+            {
+                signin.Visible = true;
+                signup.Visible = true;
+            }
+        }
 
     }
 }

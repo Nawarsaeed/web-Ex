@@ -11,7 +11,7 @@
     <link href="css/reset.css" rel="stylesheet" /> <!-- CSS reset -->
     <link href="css/style-index.css" rel="stylesheet" /> <!-- Gem style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-	
+    <link href="css/style.css" rel="stylesheet" />
   	
 	<title>Log In &amp; Sign Up Form</title>
     <asp:ContentPlaceHolder id="head" runat="server">

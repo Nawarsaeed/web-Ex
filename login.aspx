@@ -1,21 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="Default2" %>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-<title></title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Innovative Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //Custom Theme files -->
-<!-- web font -->
-<link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
-<!-- //web font -->
-<!-- js -->
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
+  
 <script src="js/jquery.min.js"></script>
 <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -28,9 +16,8 @@
 		});
 	   </script>
 <!-- //js -->
-</head>
-<body>
 	<!-- main -->
+
 	<div class="main">
 		<h1>Logga in </h1>
         <h5>Ange dina inloggningsuppgifter.</h5> 
@@ -65,7 +52,7 @@
 									</div>  
 									<div class="w3ls-submit">
 										<div class="submit-text">
-											<asp:Button ID="btnLogin" type="submit" runat="server" Text="Logga in" onclick="btnLogin_Click" />
+										<asp:Button ID="btnLogin" type="submit" runat="server" Text="Logga in" onclick="btnLogin_Click" />
 
                                         <ul>
                                             <li>
@@ -104,6 +91,6 @@
 		<!-- //copyright -->
 	</div>	
 	<!-- //main --> 
-</body>
-</html>
+    
+</asp:Content>
 
