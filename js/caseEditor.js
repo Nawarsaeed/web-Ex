@@ -80,7 +80,7 @@ var line4;
 	  	});
 	  	
 	  	$("#phoneTypes").change(function(e){
-	  		debugger;
+	  		
 	  		if($(this).val() == "1"){
 	  			$("#phoneDiv").css('height','590');
 	  			$("#phone")[0].src = "img/phones/iphone5A.png";
@@ -109,14 +109,23 @@ var line4;
 				line4 = new fabric.Line([0,400,225,400], {"stroke":"#000000", "strokeWidth":1,hasBorders:false,hasControls:false,hasRotatingPoint:false,selectable:false});
 	  		}
 	  		else if ($(this).val() == "4") {
-	  		    $("#phoneDiv").css('height', '490');
-	  		    $("#phone")[0].src ="http://localhost:5901/../img/phones/iphone7plus.png";
+	  		    $("#phoneDiv").css('height', '590');
+	  		    $("#phone")[0].src ="img/phones/iphone7 plus.png";
 	  		    //$("#borderMask")[0].src = "img/phones/GalaxyS3Mask.png";	
 	  		    line1 = new fabric.Line([0, 0, 225, 0], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
 	  		    line2 = new fabric.Line([224, 0, 225, 450], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
 	  		    line3 = new fabric.Line([0, 0, 0, 450], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
 	  		    line4 = new fabric.Line([0, 450, 225, 449], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
-              }
+	  		}
+	    	else if ($(this).val() == "5") {
+	  	    $("#phoneDiv").css('height', '590');
+	  	    $("#phone")[0].src ="img/phones/iphone7-black_720.png";
+	  	    //$("#borderMask")[0].src = "img/phones/GalaxyS3Mask.png";	
+	  	    line1 = new fabric.Line([0, 0, 225, 0], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
+	  	    line2 = new fabric.Line([224, 0, 225, 450], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
+	  	    line3 = new fabric.Line([0, 0, 0, 450], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
+	  	    line4 = new fabric.Line([0, 450, 225, 449], { "stroke": "#000000", "strokeWidth": 1, hasBorders: false, hasControls: false, hasRotatingPoint: false, selectable: false });
+	  	}
 	  	});
 	  	
 	  	line1 = new fabric.Line([0,0,225,0], {"stroke":"#000000", "strokeWidth":1,hasBorders:false,hasControls:false,hasRotatingPoint:false,selectable:false});
@@ -302,7 +311,8 @@ var line4;
 	   
 	   $('.color-preview').click(function(){
 		   var color = $(this).css("background-color");
-		   document.getElementById("phoneDiv").style.backgroundColor = color;		   
+		   document.getElementById("phoneDiv").style.backgroundColor = color;
+		   document.getElementById("phoneDiv").style.backgroundImage = null;
 	   });
 	   	   	   
 	   $(".clearfix button,a").tooltip();	  

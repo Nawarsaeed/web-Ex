@@ -23,7 +23,7 @@ img{max-width:100%;}
 /*--end reset--*/
 body {
     font-family: 'Text Me One', sans-serif;
-    background: url(../images/bg.png)repeat rgba(41, 176, 126, 0.89);
+    background: url(../img/bg.png) rgba(41, 176, 126, 0.89);
     background-attachment: fixed;
 }
 h1 {
@@ -171,7 +171,7 @@ input.checkbox:checked:after {
 }
 .submit-text span{ 
     position: absolute;
-    background: url(../images/i1.png)no-repeat 0px 0px;
+    background: url(../img/i1.png)no-repeat 0px 0px;
     width: 63px;
     height: 30px;
     background-size: 100%;
@@ -188,7 +188,7 @@ input.checkbox:checked:after {
     cursor: pointer;
     padding: 1.1em 8em 1.1em 5em;
     -webkit-appearance: none;
-    background: url(../images/i1.png)#b02932 no-repeat 175px 9px;
+    background: url(../img/i1.png)#b02932 no-repeat 175px 9px;
     transition: .5s all;
 }
 .agileits-login input[type="submit"]:hover {
@@ -502,4 +502,3 @@ input.checkbox {
     margin: 0 0 1em;
 }
 }
-/*-- //responsive-design --*/
