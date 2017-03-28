@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PhoneCase.aspx.cs" Inherits="PhoneCase" %>
+
+<html>
   <head>
     <meta charset="utf-8">
     <title>Title</title>
@@ -26,12 +27,14 @@
 	 <style type="text/css">
 		 .footer {
 			padding: 70px 0;
-			margin-top: 70px;
+			margin-top: 140px;
 			border-top: 1px solid #E5E5E5;
 			background-color: whiteSmoke;
 			}			
 	      body {
-	        padding-top: 60px;
+	        padding-top: 150px;
+            margin-right:5%;
+            margin-left:5%;
 /*	        background-color: #000000;	        */
 	      }
 	      .color-preview {
@@ -72,29 +75,7 @@
 
   <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
 
-  <!-- Navbar
-    ================================================== -->
- <div class="navbar navbar-fixed-top">
-   <div class="navbar-inner">
-     <div class="container">
-       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </a>
-       <a class="brand" href="#">Custom Phone Case</a>
-       <div class="nav-collapse" id="main-menu">
-			
-       </div>
-     </div>
-   </div>
- </div>
-
-    <div class="container">
-		<section id="typography">
-		  <div class="page-header">
-		    <h1>Design your phone Case now</h1>
-		  </div>
+  
 		
 		  <!-- Headings & Paragraph Copy -->
 		  <div class="row">			
@@ -108,8 +89,7 @@
 				  <div class="tab-content">
 				     <div class="tab-pane active" id="tab1">
 				     	<div class="well">
-<!--					      	<h3>Tee Styles</h3>-->
-<!--						      <p>-->
+
 						      	<select id="phoneTypes">                        
 				                    <option value="1" selected="selected">iPhone 5</option>
 				                    <option value="2">iPhone 4</option>				                                     
@@ -118,7 +98,7 @@
                                     <option value="5">Iphone7 </option>
 
 								</select>				
-<!--						      </p>-->								
+								
 					      </div>
 					      <div class="well">
 							<ul class="nav">
