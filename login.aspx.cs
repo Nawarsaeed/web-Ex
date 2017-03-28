@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,6 +19,8 @@ public partial class _Default : System.Web.UI.Page
                 ccbReme.Checked = true;
             }
         }
+
+
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
@@ -63,7 +65,7 @@ public partial class _Default : System.Web.UI.Page
             Usercookies.Expires = DateTime.Now.AddSeconds(10);
             Response.Cookies.Add(Usercookies);
 
-            Response.Redirect("Index.aspx");
+            Response.Redirect("Case.aspx");
         }
 
         else
@@ -71,9 +73,9 @@ public partial class _Default : System.Web.UI.Page
             lblWork.Text = "Ditt mail eller lösenord är fel";
         }
     }
-       
 
 
-    
+
+
 
 }

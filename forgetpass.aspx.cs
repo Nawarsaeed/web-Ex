@@ -1,11 +1,11 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class forgetpass : System.Web.UI.Page
+public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -14,29 +14,29 @@ public partial class forgetpass : System.Web.UI.Page
 
     protected void btnForget_Click(object sender, EventArgs e)
     {
-        //En objekt för åtkoms till databasen
+        //En objekt fÃ¶r Ã¥tkoms till databasen
         DataAccess access = new DataAccess();
         //Samla indata
 
         string mail = txbforget.Text;
         bool havemail;
-  
+
 
         //Bygg sql-satsen
-        string SqlCmd = "SELECT * FROM TBL_USER WHERE EMAIL= '" + mail + "' ;";
+        string SqlCmd = "SELECT * FROM TBL_USER WHERE USER_EMAIL= '" + mail + "' ;";
 
         //Skicka med sql-satsen
         access.ReadMail(SqlCmd, lblError, mail, out havemail);
 
-        //om det finns mail, då visar dianmail.aspx, annars visar alternativ att registera sig
+        //om det finns mail, dÃ¥ visar dianmail.aspx, annars visar alternativ att registera sig
         if (havemail)
         {
-            Response.Redirect("Dinmail.aspx");
+            Undertext.InnerText = "Email har skickat till dig";
         }
         else
         {
             Undertext.HRef = "regist.aspx";
-            Undertext.InnerText = "Kund finns inte. klicka här för att registera dig.";
+            Undertext.InnerText = "Kund finns inte. klicka hÃ¤r fÃ¶r att registera dig.";
         }
     }
 }

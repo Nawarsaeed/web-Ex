@@ -1,6 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Case.aspx.cs" Inherits="Default2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
+      <head>
     <meta charset="utf-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,27 +72,11 @@
 		.Engagement{font-family:"Engagement";}
 
 	 </style>
-  </head>
+          </head>
 
-  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
 
   <!-- Navbar
     ================================================== -->
- <div class="navbar navbar-fixed-top">
-   <div class="navbar-inner">
-     <div class="container">
-       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </a>
-       <a class="brand" href="#">Custom Phone Case</a>
-       <div class="nav-collapse" id="main-menu">
-			
-       </div>
-     </div>
-   </div>
- </div>
 
     <div class="container">
 		<section id="typography">
@@ -272,5 +260,5 @@
 
 
 </script>
-  </body>
-</html>
+</asp:Content>
+

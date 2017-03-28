@@ -1,24 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="_Default" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
-
-<title></title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Innovative Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //Custom Theme files -->
-<!-- web font -->
-<link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
-<!-- //web font -->
-<!-- js -->
+    <form id="form1" runat="server">
+  <link href="css/style.css" rel="stylesheet" />
 <script src="js/jquery.min.js"></script>
 <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -31,8 +17,8 @@
 		});
 	   </script>
 <!-- //js -->
-
 	<!-- main -->
+
 	<div class="main">
 		<h1>Logga in </h1>
         <h5>Ange dina inloggningsuppgifter.</h5> 
@@ -47,7 +33,6 @@
 					<div class="resp-tabs-container">
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 							<div class="agileits-login">
-								<form  action="#" runat="server" method="post">
 									<asp:Textbox ID="txbUser" runat="server"  type="text" class="email" name="Email" placeholder="Email" required=""></asp:Textbox>
 									<asp:Textbox ID="txbPass" runat="server"  type="password" class="password" name="Password" placeholder="Password" required=""></asp:Textbox>
 									<div class="wthree-text"> 
@@ -67,12 +52,15 @@
 									</div>  
 									<div class="w3ls-submit">
 										<div class="submit-text">
-											<asp:Button ID="btnLogin" type="submit" runat="server" Text="Logga in" onclick="btnLogin_Click" />
+										<asp:Button ID="btnLogin" type="submit" runat="server" Text="Logga in" onclick="btnLogin_Click" />
+
                                         <ul>
                                             <li>
                                                     <a href="regist.aspx" style="float:right; color:aqua;">Skapa ett konto!</a>
                                             </li>
                                         </ul>
+                                        	       
+                                             
 										</div>
                                         
 									</div>
@@ -81,7 +69,6 @@
                                      <asp:Label ID="lblWork" runat="server" />
                                    </div>
                                     	
-								</form>
 							</div> 
 						</div>
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
@@ -103,4 +90,8 @@
 		<!-- //copyright -->
 	</div>	
 	<!-- //main --> 
+    
+</form>
+    
 </asp:Content>
+
