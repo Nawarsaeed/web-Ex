@@ -5,11 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-<<<<<<< HEAD
-public partial class _Default : System.Web.UI.Page
-=======
 public partial class Default2 : System.Web.UI.Page
->>>>>>> 3d8e97f6a58824e7afacdd33570cfd2e186f4b23
 {
     protected void Page_Load(object sender, EventArgs e)
     {

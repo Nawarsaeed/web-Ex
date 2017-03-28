@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="forgetpass.aspx.cs" Inherits="_Default" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="js/jquery.min.js"></script>
-=======
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="forgetpass.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -15,7 +6,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
     <!-- js -->
 <script src="js/jquery.min.js"></script>
->>>>>>> 3d8e97f6a58824e7afacdd33570cfd2e186f4b23
 <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
