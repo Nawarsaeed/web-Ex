@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
-  
+    <form id="form1" runat="server">
+  <link href="css/style.css" rel="stylesheet" />
 <script src="js/jquery.min.js"></script>
 <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -32,7 +33,6 @@
 					<div class="resp-tabs-container">
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 							<div class="agileits-login">
-								<form  action="#" runat="server" method="post">
 									<asp:Textbox ID="txbUser" runat="server"  type="text" class="email" name="Email" placeholder="Email" required=""></asp:Textbox>
 									<asp:Textbox ID="txbPass" runat="server"  type="password" class="password" name="Password" placeholder="Password" required=""></asp:Textbox>
 									<div class="wthree-text"> 
@@ -69,7 +69,6 @@
                                      <asp:Label ID="lblWork" runat="server" />
                                    </div>
                                     	
-								</form>
 							</div> 
 						</div>
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
@@ -91,6 +90,8 @@
 		<!-- //copyright -->
 	</div>	
 	<!-- //main --> 
+    
+</form>
     
 </asp:Content>
 

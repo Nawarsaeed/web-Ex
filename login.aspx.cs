@@ -19,6 +19,8 @@ public partial class Default2 : System.Web.UI.Page
                 ccbReme.Checked = true;
             }
         }
+
+
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ public partial class Default2 : System.Web.UI.Page
 
 
         //Bygg sql-satsen, SELECT för kund
-        string SqlCmd = "SELECT * FROM TBL_USER2 WHERE EMAIL= '" + t + "' ;";
+        string SqlCmd = "SELECT * FROM TBL_USER WHERE USER_EMAIL= '" + t + "' ;";
 
         //Skicka med sql-satsen, vilken greadView ska utdata vissas i och en err-label
         access.ReadData(SqlCmd, lblError, pw, out Username, out Right);
@@ -63,7 +65,7 @@ public partial class Default2 : System.Web.UI.Page
             Usercookies.Expires = DateTime.Now.AddSeconds(10);
             Response.Cookies.Add(Usercookies);
 
-            Response.Redirect("Index.aspx");
+            Response.Redirect("Case.aspx");
         }
 
         else

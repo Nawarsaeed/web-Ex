@@ -5,7 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+<<<<<<< HEAD
 public partial class _Default : System.Web.UI.Page
+=======
+public partial class Default2 : System.Web.UI.Page
+>>>>>>> 3d8e97f6a58824e7afacdd33570cfd2e186f4b23
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -23,7 +27,7 @@ public partial class _Default : System.Web.UI.Page
 
 
         //Bygg sql-satsen
-        string SqlCmd = "SELECT * FROM TBL_USER2 WHERE EMAIL= '" + mail + "' ;";
+        string SqlCmd = "SELECT * FROM TBL_USER WHERE USER_EMAIL= '" + mail + "' ;";
 
         //Skicka med sql-satsen
         access.ReadMail(SqlCmd, lblError, mail, out havemail);
@@ -31,7 +35,7 @@ public partial class _Default : System.Web.UI.Page
         //om det finns mail, då visar dianmail.aspx, annars visar alternativ att registera sig
         if (havemail)
         {
-            Response.Redirect("Dinmail.aspx");
+            Undertext.InnerText = "Email har skickat till dig";
         }
         else
         {

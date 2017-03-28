@@ -11,7 +11,7 @@
     <link href="css/reset.css" rel="stylesheet" /> <!-- CSS reset -->
     <link href="css/style-index.css" rel="stylesheet" /> <!-- Gem style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-    <link href="css/style.css" rel="stylesheet" />
+    
   	
 	<title>Log In &amp; Sign Up Form </title>
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -26,16 +26,21 @@
 			<ul>
 				<!-- inser more links here -->
                 <li><a class="cd-name" id="OurUser" visible="false" runat="server"></a></li>
+<<<<<<< HEAD
                 <li><a class="cd-design"  id="design" href="PhoneCase.aspx" runat="server">design  </a></li>
 				<li><a class="cd-signin"  id="signin" href="login.aspx" runat="server" visible="false">Logga in</a></li>
 				<li><a class="cd-signup"  id="signup" href="regist.aspx" runat="server" visible="false">Registrera</a></li>
                 
+=======
+				<li><a class="cd-signin" id="signin" runat="server" href="login.aspx" visible="false" >Logga in</a></li>
+				<li><a class="cd-signup" id="signup" href="regist.aspx" runat="server" visible="false">Registrera</a></li>
+                <li><a class="cd-signin" id="signout" runat="server" href="logout.aspx" visible="false" >Logga out</a></li>
+>>>>>>> 3d8e97f6a58824e7afacdd33570cfd2e186f4b23
 
 			</ul>
 		</nav>
         
 	</header>
-
 	
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Gem jQuery -->

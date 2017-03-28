@@ -25,14 +25,13 @@ public partial class Default2 : System.Web.UI.Page
         //Samla indata
 
 
-        //sämsta sätt
-            sqlCmd = "INSERT INTO TBL_USER (USER_NAME, USER_PASSWORD, USER_EMAIL) VALUES ('" + u + "', '" + p + "', '" + em + "')";
-            access.SetData(sqlCmd, lblError);
-
+        sqlCmd = "INSERT INTO TBL_USER(USER_NAME, USER_PASSWORD, USER_EMAIL) VALUES ('" + u + "', '" + p + "', '" + em + "')";
 
         //Skicka med sql-satsen och en err-label
         //Kontrollera att kunden är registrerat genom att
         //ladda om sidan och kolla DroppDownList
+
+        access.SetData(sqlCmd, lblError);
 
         txbUsername.Text = "";
         txbEmail.Text = "";
