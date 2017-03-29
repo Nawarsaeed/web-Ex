@@ -42,12 +42,14 @@
 										<div class="w3ls-submit">
 											<div class="submit-text">
 												<asp:Button ID="btnRigs" runat="server" class="register"  Text="Registrera " OnClick="btnRigs_Click" /> 
-										   </div>	
+										   </div>
+                                            
                                             <div class="message">
                                               <asp:Label ID="lblError" runat="server" />
                                              </div>
 
 										</div>
+                                        <br />
 									</form> 
 								</div>  
 							</div>
