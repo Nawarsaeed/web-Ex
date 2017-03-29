@@ -65,7 +65,7 @@ public partial class Default2 : System.Web.UI.Page
             Usercookies.Expires = DateTime.Now.AddSeconds(10);
             Response.Cookies.Add(Usercookies);
 
-            Response.Redirect("Case.aspx");
+            Response.Redirect("Iframe.aspx");
         }
 
         else
