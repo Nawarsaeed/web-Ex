@@ -7,9 +7,12 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
+    <link href="css/downofpage.css" rel="stylesheet" />
     <link href="css/reset.css" rel="stylesheet" /> <!-- CSS reset -->
-    <link href="css/style-index.css" rel="stylesheet" /> <!-- Gem style -->
+    <link href="css/navg-style.css" rel="stylesheet" /> <!-- Gem style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
     
   	
@@ -21,9 +24,10 @@
   
 	<header role="banner">
         <div><a href="Index.aspx" class="cd-logo1" runat="server"><img src="img/logo.png" width="65" height="65" ></a></div>
-		<div class="cd-logo" style="color:#ffffff;" runat="server" visible="true"><a href="Iframe.aspx">Designa din skal</a></div>
-        <div class="cd-logo" runat="server" visible="true"><a href="#0">Om oss</a></div>
-        
+		<div class="cd-logo" style="color:#ffffff;" runat="server" visible="true"><a href="Custom-case.aspx">Designa din skal</a></div>
+        <div class="cd-logo" id="about" runat="server" visible="true"><a href="#0">Om oss</a></div>
+
+    
 
 		<nav class="main-nav">
   
@@ -41,8 +45,67 @@
 	
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Gem jQuery -->
-    <asp:ContentPlaceHolder runat="server" ID="Contentplaceholder1">
+
+    <asp:ContentPlaceHolder Visible="true" runat="server" ID="Contentplaceholder1">
         </asp:ContentPlaceHolder>
+    <!-- The content of your page would go here. -->
+
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Company<span>logo</span></h3>
+
+				<p class="footer-links">
+					
+					<a href="#">Om oss</a>
+					·
+					
+				</p>
+
+				<p class="footer-company-name">NAJT &copy; 2017</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Rinmansgatan 21</span> Eskilstuna, Sverige</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>0160145248</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@Najt.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Om hemsidan</span>
+					NAJT är ett små företag....
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+    
 
     
 </body>

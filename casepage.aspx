@@ -22,12 +22,11 @@
 	 <script type="text/javascript">
 	 </script>
 	 <style type="text/css">
-		 .footer {
-			padding: 70px 0;
-			margin-top: 70px;
-			border-top: 1px solid #E5E5E5;
-			background-color: whiteSmoke;
-			}			
+          body{
+              background-color:#ffffff;
+              padding-top:70px;
+          }
+		 		
 	      .color-preview {
 	      	border: 1px solid #CCC;
 	      	margin: 2px;
@@ -43,7 +42,7 @@
 		    -webkit-transform:rotate(90deg);
 		    -moz-transform:rotate(90deg);
 		    -o-transform:rotate(90deg);
-		     filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+		     filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); 
 		    -ms-transform:rotate(90deg);		   
 		}		
 		.Arial{font-family:"Arial";}
@@ -64,7 +63,6 @@
 	 </style>
 </head>
 <body>
-    <form id="form1" runat="server">
 
   <!-- Navbar
     ================================================== -->
@@ -251,6 +249,5 @@
 
 
 </script>
-    </form>
 </body>
 </html>

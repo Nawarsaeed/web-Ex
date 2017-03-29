@@ -373,4 +373,5 @@ var line4;
 	 function imageIsLoaded(e) {
 	     $('.myImg').attr('src', e.target.result);
 	 };
+
 	 
