@@ -21,7 +21,7 @@
   
 	<header role="banner">
         <div><a href="Index.aspx" class="cd-logo1" runat="server"><img src="img/logo.png" width="65" height="65" ></a></div>
-		<div class="cd-logo" style="color:#ffffff;" runat="server" visible="true"><a href="case.html">Designa din skal</a></div>
+		<div class="cd-logo" style="color:#ffffff;" runat="server" visible="true"><a href="Iframe.aspx">Designa din skal</a></div>
         <div class="cd-logo" runat="server" visible="true"><a href="#0">Om oss</a></div>
         
 
