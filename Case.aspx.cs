@@ -11,4 +11,9 @@ public partial class Default2 : System.Web.UI.Page
     {
 
     }
+
+    protected void Change()
+    {
+        if (phoneTypes.Value == "3") PhonecasePrice.InnerText = "6 000 kr";
+    }
 }

@@ -14,7 +14,7 @@
     <link href="css/reset.css" rel="stylesheet" /> <!-- CSS reset -->
     <link href="css/style-index.css" rel="stylesheet" /> <!-- Gem style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-    
+    <link href="css/dropdown.css" rel="stylesheet" />
   	
 	<title>Log In &amp; Sign Up Form</title>
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -33,7 +33,14 @@
             
 			<ul>
 				<!-- inser more links here -->
-                <li><a class="cd-name" id="OurUser" visible="false" runat="server"></a></li>
+                <li>
+                    <div class="dropdown" runat="server" >
+                         <button class="dropbtn" runat="server" visible="false" id="OurUser">Dropdown</button>
+                         <div class="dropdown-content">
+                         <a href="Profilepage.aspx">Profil</a>
+                       </div>
+                     </div>
+                </li>
                
 				<li><a class="cd-signin" id="signin" runat="server" href="login.aspx" visible="false" >Logga in</a></li>
 				<li><a class="cd-signup" id="signup" href="regist.aspx" runat="server" visible="false">Registrera</a></li>
@@ -43,9 +50,10 @@
 	</header>
 	
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/main.js"></script> <!-- Gem jQuery -->
-    <asp:ContentPlaceHolder runat="server" ID="Contentplaceholder1">
-        </asp:ContentPlaceHolder>
+<script src="js/main.js"></script>
+     <!-- Gem jQuery -->
+ <asp:ContentPlaceHolder runat="server" ID="Contentplaceholder1">
+ </asp:ContentPlaceHolder>
 
     <!-- The content of your page would go here. -->
 
