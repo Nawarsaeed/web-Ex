@@ -13,12 +13,11 @@
     <link href="css/reset.css" rel="stylesheet" /> <!-- CSS reset -->
     <link href="css/style-index.css" rel="stylesheet" /> <!-- Gem style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-<<<<<<< HEAD
+
     
     
-=======
     <link href="css/dropdown.css" rel="stylesheet" />
->>>>>>> a985700aef9be90fd1dba50a3365bb89fd2c3646
+
   	
 	<title>Välkommen till NAJT </title>
     <asp:ContentPlaceHolder id="head" runat="server">
