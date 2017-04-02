@@ -59,11 +59,7 @@
 				<div class="clear"> </div>
 			</div>  
 		</div>
-		<!-- copyright -->
-		<div class="copyright">
-			<p> © 2016 Innovative Login Form . All rights reserved | Design by ?</p>
-		</div>
-		<!-- //copyright -->
+		
 	</div>	
 	<!-- //main --> 
 </asp:Content>

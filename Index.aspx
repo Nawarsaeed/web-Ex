@@ -3,7 +3,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contentplaceholder1" Runat="Server">
-    <link href="css/style.css" rel="stylesheet" />
-<script src="js/jquery.min.js"></script> 
 </asp:Content>
 

@@ -1,15 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="casepage.aspx.cs" Inherits="casepage" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="utf-8"/>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content=""/>
-    <meta name="author" content="NAJT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="NAJT">
 
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        
+    <![endif]-->
+    <!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>	
 	<script type="text/javascript" src="js/fabric.js"></script>
 	<script type="text/javascript" src="js/caseEditor.js"></script>
@@ -17,17 +20,17 @@
 	
     <!-- Le styles -->
     <link type="text/css" rel="stylesheet" href="css/jquery.miniColors.css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	 <script type="text/javascript">
 	 </script>
 	 <style type="text/css">
-		 .footer {
-			padding: 70px 0;
-			margin-top: 70px;
-			border-top: 1px solid #E5E5E5;
-			background-color: whiteSmoke;
-			}			
+		 			
+	      body {
+	        padding-top: 60px;
+/*	        background-color: #000000;	        */
+	      }
 	      .color-preview {
 	      	border: 1px solid #CCC;
 	      	margin: 2px;
@@ -62,9 +65,9 @@
 		.Engagement{font-family:"Engagement";}
 
 	 </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+  </head>
+
+  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
 
   <!-- Navbar
     ================================================== -->
@@ -122,14 +125,16 @@
 								<li class="color-preview" title="Antique Sapphire" style="background-color:#0f77c0;"></li>
 								<li class="color-preview" title="Heather Navy" style="background-color:#3469b7;"></li>							
 								<li class="color-preview" title="Cherry Red" style="background-color:#c50404;"></li>
+                                <li class="color-preview,em-anguished "></li>
 							</ul>
 						</div>			      
 				     </div>				   
 				    <div class="tab-pane" id="tab2">
 				    	<div class="well" style="height:400px;">
 				    		<div class="input-append">
-							  <input class="span2" id="text-string" type="text" placeholder="add text here..."/><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
-							  <hr />
+							  <input class="span2" id="text-string" type="text" placeholder="add text here..."><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
+							  <hr>
+                               
                                 <div style="height:0px;overflow:hidden">
                                     <input type="file" id="fileInput" name="fileInput"  />
                                 </div>
@@ -140,20 +145,20 @@
                                   }
                                 </script>
                                 <hr />
-                                <img class="myImg" style="cursor:pointer; border-radius:5%" src="#" alt="your image" />
+                                <img class="myImg" style="cursor:pointer; border-radius:5%" src="#" alt="your image">
 							  
-							  <hr />
+							  <hr>
 							</div>
-				    		<img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/1.jpg" />
-				    		<img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/7.jpg" />
-			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/8.jpg" />
-			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/2.jpg" />
-			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/3.jpg" />
-			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/4.jpg" />
-			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/5.jpg" />
-			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/6.jpg" />
-                            <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/9.jpg" />
-                            <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/10.jpg" />                
+				    		<img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/1.jpg">
+				    		<img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/7.jpg">
+			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/8.jpg">
+			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/2.jpg">
+			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/3.jpg">
+			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/4.jpg">
+			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/5.jpg">
+			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/6.jpg">
+                            <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/9.jpg">
+                            <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/10.jpg">                
 				    	</div>				      
 				    </div>
 				  </div>
@@ -180,15 +185,15 @@
 								    <li><a tabindex="-1" href="#" onclick="setFont('Plaster');" class="Plaster">Plaster</a></li>
 								    <li><a tabindex="-1" href="#" onclick="setFont('Engagement');" class="Engagement">Engagement</a></li>
 				                </ul>
-							    <button id="text-bold" class="btn" data-original-title="Bold"><img src="img/font_bold.png" height="" width=""/></button>
-							    <button id="text-italic" class="btn" data-original-title="Italic"><img src="img/font_italic.png" height="" width=""/></button>
-							    <button id="text-strike" class="btn" title="Strike" style=""><img src="img/font_strikethrough.png" height="" width=""/></button>
-							 	<button id="text-underline" class="btn" title="Underline" style=""><img src="img/font_underline.png"/></button>
-							 	<a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Color"><input type="hidden" id="text-fontcolor" class="color-picker" size="7" value="#000000"/></a>
-						 		<a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Border Color"><input type="hidden" id="text-strokecolor" class="color-picker" size="7" value="#000000" /></a>
+							    <button id="text-bold" class="btn" data-original-title="Bold"><img src="img/font_bold.png" height="" width=""></button>
+							    <button id="text-italic" class="btn" data-original-title="Italic"><img src="img/font_italic.png" height="" width=""></button>
+							    <button id="text-strike" class="btn" title="Strike" style=""><img src="img/font_strikethrough.png" height="" width=""></button>
+							 	<button id="text-underline" class="btn" title="Underline" style=""><img src="img/font_underline.png"></button>
+							 	<a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Color"><input type="hidden" id="text-fontcolor" class="color-picker" size="7" value="#000000"></a>
+						 		<a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Border Color"><input type="hidden" id="text-strokecolor" class="color-picker" size="7" value="#000000"></a>
 								  <!--- Background <input type="hidden" id="text-bgcolor" class="color-picker" size="7" value="#ffffff"> --->
 							</div>							  
-							<div class="pull-right" id="imageeditor" style="display:none;">					  
+							<div class="pull-right" align="" id="imageeditor" style="display:none;">					  
 							  <div class="btn-group">										      
 							      <button class="btn" id="bring-to-front" title="Bring to Front"><i class="icon-fast-backward rotate" style="height:19px;"></i></button>
 							      <button class="btn" id="send-to-back" title="Send to Back"><i class="icon-fast-forward rotate" style="height:19px;"></i></button>							      
@@ -200,7 +205,7 @@
 				<!--	EDITOR      -->	
 				<div style="background-color: #ffffff;position: relative; top:20px;height:560px;">				
 					<div id="phoneDiv" class="page" style="width: 282px; height: 590px; position: relative;left:25%; background-color: rgb(255, 255, 255);">
-						<img id="phone" src="img/phones/iphone5A.png" />
+						<img id="phone" src="img/phones/iphone5A.png"></img>
 						<div id="drawingArea" style="position: absolute;top:70px;left:30px;z-index: 10;width: 230px; height:450px;">					
 							<canvas id="tcanvas" width=230 height="450" class="hover" style="-webkit-user-select: none;"></canvas>
 						</div>
@@ -213,7 +218,7 @@
 		      <div class="well">
 		      	<h3>Total Prices</h3>
 			      <p>
-                    <table class="table">
+			      	<table class="table">
 			      		<tr>
 			      			<td>Phone Case</td>
 			      			<td align="right">$19.99</td>
@@ -237,20 +242,11 @@
 		</section>
     </div><!-- /container -->
     
-<!-- Footer ================================================== -->
-<%--      <footer class="footer">      
-      	<div class="container">
-	        <p class="pull-right"><a href="#">Back to top</a></p>	        
-	      </div>       
-    </footer--%>>
-    <!-- Le javascript
-    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->    
     <script src="js/bootstrap.min.js"></script>    
     <script type="text/javascript">
 
 
 </script>
-    </form>
-</body>
+  </body>
 </html>

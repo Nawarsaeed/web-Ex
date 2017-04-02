@@ -2,21 +2,21 @@
 
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html">
 <head runat="server">
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+   
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-
+    <%--<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />--%>
     <link href="css/down-style.css" rel="stylesheet" />
     <link href="css/reset.css" rel="stylesheet" /> <!-- CSS reset -->
     <link href="css/style-index.css" rel="stylesheet" /> <!-- Gem style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
     
+    
   	
-	<title>Log In &amp; Sign Up Form</title>
+	<title>Välkommen till NAJT </title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -24,8 +24,8 @@
   
 	<header role="banner">
         <div><a href="Index.aspx" class="cd-logo1" runat="server"><img src="img/logo.png" width="65" height="65" ></a></div>
-		<div class="cd-logo" style="color:#ffffff;" runat="server" visible="true"><a href="Iframe.aspx">Designa din skal</a></div>
-        <div class="cd-logo" runat="server" visible="true"><a href="#0">Om oss</a></div>
+		<div class="cd-logo" style="color:#ffffff;" runat="server" visible="true"><a href="Iframe.aspx">Designa</a></div>
+        <div class="cd-logo" runat="server" visible="true"><a href="About.aspx">Om oss</a></div>
         
 
 		<nav class="main-nav">
@@ -53,7 +53,7 @@
 
 			<div class="footer-left">
 
-				<h3>Company<span>logo</span></h3>
+				<h3><span>NAJT</span></h3>
 
 				<p class="footer-links">
 					
