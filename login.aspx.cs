@@ -18,6 +18,11 @@ public partial class Default2 : System.Web.UI.Page
                 txbPass.Text = cookies["Password"];
                 ccbReme.Checked = true;
             }
+            HttpCookie Usercookies = Request.Cookies["User"];
+            if (Usercookies != null)
+            {
+                Response.Redirect("Profilepage.aspx");
+            }
         }
 
 
@@ -33,13 +38,14 @@ public partial class Default2 : System.Web.UI.Page
         string pw = txbPass.Text;
         bool Right;
         string Username = "";
+        string Usermail = "";
 
 
         //Bygg sql-satsen, SELECT för kund
         string SqlCmd = "SELECT * FROM TBL_USER WHERE USER_EMAIL= '" + t + "' ;";
 
         //Skicka med sql-satsen, vilken greadView ska utdata vissas i och en err-label
-        access.ReadData(SqlCmd, lblError, pw, out Username, out Right);
+        access.ReadData(SqlCmd, lblError, pw, out Username, out Right, out Usermail);
 
 
         //Om det logga in, då skapa cookies,annars visar fel
@@ -62,7 +68,8 @@ public partial class Default2 : System.Web.UI.Page
 
             HttpCookie Usercookies = new HttpCookie("User");
             Usercookies["Name"] = Username;
-            Usercookies.Expires = DateTime.Now.AddSeconds(10);
+            Usercookies["Mail"] = Usermail;
+            Usercookies.Expires = DateTime.Now.AddMinutes(5);
             Response.Cookies.Add(Usercookies);
 
             Response.Redirect("Iframe.aspx");
