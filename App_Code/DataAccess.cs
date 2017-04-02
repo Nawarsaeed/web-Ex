@@ -20,13 +20,14 @@ public class DataAccess
 
     //Peka & öppna databasen
     //Argumentlista: sqlCmd = sql-satsen, l = label för ev felmeddelande
-    public void ReadData(string sqlString, Label l, string pw, out string Name, out bool pn)
+    public void ReadData(string sqlString, Label l, string pw, out string Name, out bool pn, out string Email)
     {
 
         errMessage = "";
         //Lista för kund, OBS! using System.Collections.Generic; krävs
         //List<KundData> KundList = new List<KundData>();
         Name = "";
+        Email = "";
         pn = false;
         string dbpw = "";
 
@@ -51,6 +52,7 @@ public class DataAccess
             {
 
                 Name = (string)reader["USER_NAME"];
+                Email = (string)reader["USER_EMAIL"];
                 dbpw = (string)reader["USER_PASSWORD"];
 
                 if (pw == dbpw) pn = true;
@@ -141,6 +143,63 @@ public class DataAccess
         catch (Exception ex) //om det blir fel
         {
             errMessage = errMessage + "Databasfel ReadMail:    <br/>" + ex;
+        }
+        finally //avsulta
+        {
+            Conn.Close();
+            if (errMessage != "")//Om det finns ett felmed
+            //Om catch exekverades
+            {
+                l.Text = errMessage; ///Skriv ut meddelande i labeln l
+            }
+        }
+    }
+
+    public void TakeInformation(string sqlString, Label l, out string FName, out string EName, out string Adress, out string Stad, out string Post, out string Land, out string Mobil)
+    {
+
+        errMessage = "";
+        //Lista för kund, OBS! using System.Collections.Generic; krävs
+        //List<KundData> KundList = new List<KundData>();
+        FName = "";
+        EName = "";
+        Adress = "";
+        Stad = "";
+        Post = "";
+        Land = "";
+        Mobil = "";
+
+        //Ange vilken ConnectionString vill du använda
+        string ConnString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        //Skapa uppkopplingen
+        OleDbConnection Conn = new OleDbConnection(ConnString);
+        //Skapa SQL-kommando
+        OleDbCommand SqlCommand = new OleDbCommand(sqlString, Conn);
+
+
+        //Öppna uppkoplingen 
+        try //utför kommando
+        {
+            Conn.Open(); //öppna DB
+                         //Exekvera sql-kommandot
+
+            OleDbDataReader reader = SqlCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                FName = (string)reader["USER_FORENAME"];
+                EName = (string)reader["USER_AFTERNAME"];
+                Adress = (string)reader["USER_ADRESS"];
+                Stad = (string)reader["USER_STAD"];
+                Post = (string)reader["USER_POSTNR"];
+                Land = (string)reader["USER_LAND"];
+                Mobil = (string)reader["USER_Mobil"];
+            }
+        }
+        catch (Exception ex) //om det blir fel
+        {
+            errMessage = errMessage + "Databasfel TakeData:    <br/>" + ex;
         }
         finally //avsulta
         {
