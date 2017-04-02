@@ -47,7 +47,6 @@
 											<div class="submit-text">
 												<asp:Button ID="btnSpara" runat="server" class="Spara"  Text="Spara " OnClick="btnSpara_Click" /> 
 										   </div>
-                                            
                                             <div class="message">
                                               <asp:Label ID="lblError" runat="server" />
                                              </div>
