@@ -69,7 +69,7 @@ public partial class Default2 : System.Web.UI.Page
             HttpCookie Usercookies = new HttpCookie("User");
             Usercookies["Name"] = Username;
             Usercookies["Mail"] = Usermail;
-            Usercookies.Expires = DateTime.Now.AddMinutes(5);
+            Usercookies.Expires = DateTime.Now.AddMinutes(1);
             Response.Cookies.Add(Usercookies);
 
             Response.Redirect("Iframe.aspx");

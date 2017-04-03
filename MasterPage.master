@@ -41,6 +41,7 @@
                          <button class="dropbtn" runat="server" visible="false" id="OurUser">Dropdown</button>
                          <div class="dropdown-content">
                          <a href="Profilepage.aspx">Profil</a>
+                         <a href="Changepass.aspx">Ändra lösenord</a>
                        </div>
                      </div>
                 </li>

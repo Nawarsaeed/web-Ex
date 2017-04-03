@@ -14,7 +14,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             OurUser.Visible = true;
             OurUser.InnerText = Usercookies["Name"];
-            Usercookies.Expires = DateTime.Now.AddMinutes(5);
+            Usercookies.Expires = DateTime.Now.AddMinutes(1);
+            Response.Cookies.Set(Usercookies);
 
             signout.Visible = true;
             signin.Visible = false;

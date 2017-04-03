@@ -15,7 +15,6 @@ public partial class _Default : System.Web.UI.Page
             if (Usercookies != null)
             {
                 Takedata();
-
             }
         }
     }
@@ -31,6 +30,8 @@ public partial class _Default : System.Web.UI.Page
 
         sqlCmd = "UPDATE TBL_USER SET USER_FORENAME = '" + txbFirsName.Text + "',  USER_AFTERNAME = '" + txbSurName.Text + "', USER_ADRESS = '" + txbAdress.Text + "', USER_STAD = '" + txbCity.Text + "', USER_POSTNR = '" + txbZip.Text + "', USER_LAND = '" + txbCountry.Text + " ', USER_MOBIL = '" + txbMobilenumber.Text + "' WHERE USER_EMAIL = '" + usermail + "';";
         access.SetData(sqlCmd, lblError);
+
+        Response.Redirect("Profilepage.aspx");
 
     }
 
