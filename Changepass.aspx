@@ -35,9 +35,9 @@
 							<div class="login-top sign-top">
 								<div class="agileits-login">
 									<form action="#" runat="server" method="post">
-										<asp:Textbox ID="txbOldPass" runat="server" type="password" name="OldPass" placeholder="Ditt gamla lösenord" ></asp:Textbox>
-										<asp:Textbox ID="txbNewPass" runat="server" type="password" name="NewPass" placeholder="Ditt nya lösenord" ></asp:Textbox>
-                                        <asp:Textbox ID="txbRepeat" runat="server" type="password" name="RepeatPass" placeholder="Skriv om lösenordet" ></asp:Textbox>
+										<asp:Textbox ID="txbOldPass" runat="server" type="password" name="OldPass" placeholder="Ditt gamla lösenord" required="" ></asp:Textbox>
+										<asp:Textbox ID="txbNewPass" runat="server" type="password" name="NewPass" placeholder="Ditt nya lösenord" required=""></asp:Textbox>
+                                        <asp:Textbox ID="txbRepeat" runat="server" type="password" name="RepeatPass" placeholder="Skriv om lösenordet" required=""></asp:Textbox>
              
 										 
 										<div class="w3ls-submit">

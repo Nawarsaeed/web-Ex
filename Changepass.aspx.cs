@@ -28,16 +28,26 @@ public partial class _Default : System.Web.UI.Page
 
         //Samla indata
 
+
         string SqlCmd = "SELECT * FROM TBL_USER WHERE USER_EMAIL= '" + usermail + "' ;";
 
         access.ReadData(SqlCmd, lblError, oldpw, out Username, out Right, out Usermail);
 
-        if (Right && newpw == repeat)
+
+        if (!Right)
+        {
+            lblError.Text = "gamla lösenord är fel.";
+        }
+        else if (Right && newpw == repeat)
         {
             string sqlCmd;
             sqlCmd = "UPDATE TBL_USER SET USER_PASSWORD = '" + newpw + "' WHERE USER_EMAIL = '" + usermail + "';";
             access.SetData(sqlCmd, lblError);
-            Response.Redirect("Changepass.aspx");
+            txbOldPass.Text = "";
+            txbNewPass.Text = "";
+            txbRepeat.Text = "";
+            lblError.Text = "Lösenorden ändras!";
+
         }
         else
         {

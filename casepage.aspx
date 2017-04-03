@@ -1,13 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="NAJT">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="casepage.aspx.cs" Inherits="casepage2" %>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         
@@ -65,13 +62,9 @@
 		.Engagement{font-family:"Engagement";}
 
 	 </style>
-  </head>
-
-  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
-
-  <!-- Navbar
-    ================================================== -->
-
+</head>
+<body>
+    <form id="form1" runat="server">
     <div class="container">
 		<section id="typography">
 		  <div class="page-header">
@@ -79,6 +72,7 @@
 		  </div>
 		
 		  <!-- Headings & Paragraph Copy -->
+             
 		  <div class="row">			
 		    <div class="span3">
 		    	
@@ -92,18 +86,18 @@
 				     	<div class="well">
 <!--					      	<h3>Tee Styles</h3>-->
 <!--						      <p>-->
-						      	<select id="phoneTypes">                        
-				                    <option value="1" selected="selected">iPhone 5</option>
-				                    <option value="2">iPhone 4</option>				                                     
-				                    <option value="3">Samsumg Galaxy s3</option>
-                                    <option value="4">Iphone7 plus</option>
-                                    <option value="5">Iphone7 </option>
+						      	<asp:DropDownList id="phoneTypes" runat="server"  OnSelectedIndexChanged="phoneTypes_SelectedIndexChanged" AutoPostBack="true">
+                                    <asp:ListItem value="1" Selected="False"> iPhone 5 </asp:ListItem>   
+                                    <asp:ListItem value="2" Selected="False"> iPhone 4 </asp:ListItem>     
+                                    <asp:ListItem value="3" Selected="False"> Samsumg Galaxy s3 </asp:ListItem>     
+                                    <asp:ListItem value="4" Selected="False"> Iphone7 plus </asp:ListItem>  
+                                    <asp:ListItem value="5" Selected="False"> Iphone7 </asp:ListItem>                  
 
-								</select>				
+								</asp:DropDownList>				
 <!--						      </p>-->								
 					      </div>
 					      <div class="well">
-							<ul class="nav">
+							<ul class="nav" id="Color" runat="server">
 								<li class="color-preview" title="White" style="background-color:#ffffff;"></li>
 								<li class="color-preview" title="Dark Heather" style="background-color:#616161;"></li>
 								<li class="color-preview" title="Gray" style="background-color:#f0f0f0;"></li>
@@ -133,8 +127,6 @@
 				    	<div class="well" style="height:400px;">
 				    		<div class="input-append">
 							  <input class="span2" id="text-string" type="text" placeholder="add text here..."><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
-							  <hr>
-                               
                                 <div style="height:0px;overflow:hidden">
                                     <input type="file" id="fileInput" name="fileInput"  />
                                 </div>
@@ -149,7 +141,7 @@
 							  
 							  <hr>
 							</div>
-				    		<img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/1.jpg">
+				    		<img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/1.jpg" runat="server" onclick="Changeimg">
 				    		<img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/7.jpg">
 			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/8.jpg">
 			                <img style="cursor:pointer;width:90px;height:120px;" class="img-polaroid" src="img/phones/designs/2.jpg">
@@ -221,15 +213,18 @@
 			      	<table class="table">
 			      		<tr>
 			      			<td>Phone Case</td>
-			      			<td align="right">$19.99</td>
+			      			<td align="right" id="CasePrice" runat="server">200</td>
+                              <td align="right">kr</td>
 			      		</tr>
 			      		<tr>
 			      			<td>Head Phone</td>
-			      			<td align="right">$4.99</td>
+			      			<td align="right" id="DesginPrice" runat="server">50</td>
+                              <td align="right">kr</td>
 			      		</tr>			      		
 			      		<tr>
 			      			<td><strong>Total</strong></td>
-			      			<td align="right"><strong>$24.99</strong></td>
+			      			<td align="right" id="TotalPrice" runat="server">250</td>
+                              <td align="right">kr</td>
 			      		</tr>
 			      	</table>			
 			      </p>
@@ -248,5 +243,7 @@
 
 
 </script>
-  </body>
+       <asp:Label ID="lblError" runat="server"></asp:Label>
+    </form>
+</body>
 </html>

@@ -39,8 +39,7 @@ public partial class Default2 : System.Web.UI.Page
         bool Right;
         string Username = "";
         string Usermail = "";
-
-
+        
         //Bygg sql-satsen, SELECT för kund
         string SqlCmd = "SELECT * FROM TBL_USER WHERE USER_EMAIL= '" + t + "' ;";
 
@@ -69,7 +68,7 @@ public partial class Default2 : System.Web.UI.Page
             HttpCookie Usercookies = new HttpCookie("User");
             Usercookies["Name"] = Username;
             Usercookies["Mail"] = Usermail;
-            Usercookies.Expires = DateTime.Now.AddMinutes(1);
+            Usercookies.Expires = DateTime.Now.AddMinutes(5);
             Response.Cookies.Add(Usercookies);
 
             Response.Redirect("Iframe.aspx");
